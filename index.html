@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Challenge</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #000, #111);
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: #ff4444;
+      text-shadow: 2px 2px 15px #ff0000;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    .btn {
+      padding: 15px 40px;
+      font-size: 1.3rem;
+      background: #ff4444;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(255,0,0,0.6);
+    }
+
+    .btn:hover {
+      background: #cc0000;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255,0,0,0.9);
+    }
+
+    /* Figuras estilo Canva */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 68, 68, 0.3);
+      width: 150px;
+      height: 150px;
+      top: 10%;
+      left: 10%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .triangle {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 80px solid transparent;
+      border-right: 80px solid transparent;
+      border-bottom: 140px solid rgba(0, 204, 102, 0.3);
+      bottom: 15%;
+      right: 10%;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .square {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: rgba(255, 255, 0, 0.3);
+      top: 20%;
+      right: 20%;
+      transform: rotate(25deg);
+      animation: float 7s ease-in-out infinite;
+    }
+
+    .star {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 50px;
+      top: 30%;
+      left: 70%;
+      animation: twinkle 3s infinite alternate;
+    }
+
+    .wave {
+      position: absolute;
+      width: 200px;
+      height: 40px;
+      background: rgba(0, 150, 255, 0.3);
+      border-radius: 50%;
+      bottom: 5%;
+      left: 30%;
+      animation: waveMove 5s ease-in-out infinite;
+    }
+
+    /* Nueva figura en esquina inferior izquierda */
+    .bigCircle {
+      position: absolute;
+      bottom: -40px;
+      left: -40px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,0,150,0.4), rgba(255,0,0,0.2));
+      animation: pulse 6s infinite alternate;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.3; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1.1); }
+    }
+
+    @keyframes waveMove {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(30px); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes pulse {
+      from { transform: scale(0.9); opacity: 0.6; }
+      to { transform: scale(1.1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Figuras decorativas -->
+  <div class="circle"></div>
+  <div class="triangle"></div>
+  <div class="square"></div>
+  <div class="star">★</div>
+  <div class="wave"></div>
+  <div class="bigCircle"></div> <!-- Nueva figura en esquina inferior izquierda -->
+
+  <!-- Contenido principal -->
+  <div class="container">
+    <h1>🔥 Daily Challenge 🔥</h1>
+    <p>
+      25 days, 25 challenges.
+      Small steps that transform 
+      your health and energy.
+    </p>
+    <a href="retos.html"><button class="btn">Comenzar ahora</button></a>
+  </div>
+</body>
+</html>
