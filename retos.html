@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Health - Retos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="reto-titulo">🔥 Reto del día</h1>
+
+<div class="map-container">
+
+  <svg viewBox="0 0 300 900" class="camino">
+    <path d="M150 40 
+             C 50 140, 50 240, 150 300
+             C 250 360, 250 460, 150 540
+             C 50 620, 50 720, 150 800"
+          fill="none"
+          stroke="#b5b5b5"
+          stroke-width="4"
+          stroke-dasharray="8,8"/>
+  </svg>
+
+  <!-- BOTONES -->
+  <div class="day d1" onclick="openChallenge(1)">1</div>
+  <div class="day d2" onclick="openChallenge(2)">2</div>
+  <div class="day d3" onclick="openChallenge(3)">3</div>
+  <div class="day d4" onclick="openChallenge(4)">4</div>
+  <div class="day d5" onclick="openChallenge(5)">5</div>
+  <div class="day d6" onclick="openChallenge(6)">6</div>
+  <div class="day d7" onclick="openChallenge(7)">7</div>
+  <div class="day d8" onclick="openChallenge(8)">8</div>
+  <div class="day d9" onclick="openChallenge(9)">9</div>
+  <div class="day d10" onclick="openChallenge(10)">10</div>
+  <div class="day d11" onclick="openChallenge(11)">11</div>
+  <div class="day d12" onclick="openChallenge(12)">12</div>
+
+</div>
+
+<div class="popup" id="popup">
+  <div class="popup-card">
+    <h2 id="challengeTitle"></h2>
+    <p id="challengeText"></p>
+    <p class="fact" id="challengeFact"></p>
+    <button onclick="completeChallenge()">✅ Completado</button><br><br>
+    <button class="close" onclick="closeChallenge()">Cerrar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
